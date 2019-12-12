@@ -51,7 +51,7 @@ public class TankHealth : MonoBehaviour
     {
         // Adjust the value and colour of the slider.
 		m_Slider.value= m_CurrentHealth;
-		m_FillImage.color = Color.lerp(m_ZeroHealthColor,m_FullHealthColor,m_CurrentHealth/m_StartingHealth);
+		m_FillImage.color = Color.Lerp(m_ZeroHealthColor,m_FullHealthColor,m_CurrentHealth/m_StartingHealth);
 		
     }
 
@@ -62,10 +62,10 @@ public class TankHealth : MonoBehaviour
 		m_Dead=true;
 		
 		m_ExplosionParticles.transform.position = transform.position;
-		m_ExplosionParticles.gameObject.setActive(true);
+		m_ExplosionParticles.gameObject.SetActive(true);
 		
-		m_ExplosionParticles.play();
-		m_ExplosionAudio.play();
-		gameObject.setActive(false);
+		m_ExplosionParticles.Play();
+		m_ExplosionAudio.Play();
+		gameObject.SetActive(false);
     }
 }
